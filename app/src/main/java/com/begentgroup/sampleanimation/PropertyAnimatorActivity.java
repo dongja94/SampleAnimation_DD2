@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewPropertyAnimator;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
@@ -130,6 +131,18 @@ public class PropertyAnimatorActivity extends AppCompatActivity {
                 ObjectAnimator animator = (ObjectAnimator)AnimatorInflater.loadAnimator(PropertyAnimatorActivity.this, R.animator.object_text_color);
                 animator.setTarget(animatorView);
                 animator.start();
+            }
+        });
+
+        btn = (Button)findViewById(R.id.btn_view_animator);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ViewPropertyAnimator animator = animatorView.animate();
+                animatorView.setAlpha(0);
+                animator.alpha(1)
+                        .setDuration(1000)
+                        .start();
             }
         });
 

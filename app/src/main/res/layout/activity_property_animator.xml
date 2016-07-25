@@ -62,6 +62,13 @@
             android:layout_height="wrap_content"
             android:text="XML"
             android:id="@+id/btn_object_xml" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view"
+            android:id="@+id/btn_view_animator" />
     </LinearLayout>
 
     <TextView
